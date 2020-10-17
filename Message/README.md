@@ -5,7 +5,7 @@
 <exec_depend>message_runtime</exec_depend>
 ```
 ### `CMakeList.txt`：
-```m
+```python
 find_package(catkin REQUIRED COMPONENTS
    roscpp
    rospy
