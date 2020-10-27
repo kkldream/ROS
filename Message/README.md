@@ -1,10 +1,10 @@
 # 目錄
-* [回主目錄](https://github.com/kkldream/ROS-Note/)
+* [根目錄](https://github.com/kkldream/ROS-Note/)
 * [資源](#資源)
-* [建立自定義的.msg檔](#建立自定義的.msg檔)
-* [使用自定義的.msg檔](#使用自定義的.msg檔)
+* [建立自定義的.msg檔](#建立自定義的msg檔)
+* [使用自定義的.msg檔](#使用自定義的msg檔)
   * [Python](#Python)
-  * [C++](#C++)
+  * [C++](#C)
   
 # 資源
 ### 官方提供的Message格式：(點擊圖片前往連結)
@@ -18,6 +18,7 @@
 ```
 ### `CMakeList.txt`：
 ```python
+# 第10行
 find_package(catkin REQUIRED COMPONENTS
    roscpp
    rospy
@@ -25,24 +26,24 @@ find_package(catkin REQUIRED COMPONENTS
    message_generation
 )
 ...
-
-catkin_package(
-  # INCLUDE_DIRS include
-  # LIBRARIES beginner_tutorials
-  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
-  # DEPENDS system_lib
+# 第50行
+add_message_files(
+   FILES
+   msg_name.msg
 )
 ...
-
+# 第71行
 generate_messages(
    DEPENDENCIES
    std_msgs
 )
 ...
-
-add_message_files(
-   FILES
-   msg_name.msg
+# 第105行
+catkin_package(
+  # INCLUDE_DIRS include
+  # LIBRARIES beginner_tutorials
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+  # DEPENDS system_lib
 )
 
 ```

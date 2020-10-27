@@ -1,11 +1,25 @@
-### 常用程式：
+# 目錄
+* [根目錄](https://github.com/kkldream/ROS-Note/)
+* [必要](#必要：)
+* [常用](#常用：)
+
+### 必要：
 ```python
-#!/usr/bin/python
+#!/usr/bin/env python
 ## coding=utf-8
-import rospy                            # import rospy 模組
-frq = rospy.get_param("/print_frq", 10) # 取得 parameter 變數 或 預設值
-rospy.init_node('hello_python_node')    # 初始化 hello_python_node
-while not rospy.is_shutdown():          # 在 rospy 還沒結束前，執行下列指令:
-    rospy.loginfo('Hello World')        # 印出 Hello World
-    rospy.sleep(frq)                    # 間隔 frq 秒
+import rospy
+rospy.init_node('hello_python_node')
 ```
+
+### 常用：
+```python
+# 取得 parameter 變數 或 預設值
+var = rospy.get_param("/print_frq", 10)
+# 回傳 rospy 是否中止
+var = rospy.is_shutdown():
+# 印出字串
+rospy.loginfo('Hello World')
+# 延遲 1 秒
+rospy.sleep(1)
+```
+

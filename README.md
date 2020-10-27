@@ -1,6 +1,7 @@
 # 目錄
 * [工作區](#工作區)
-* [建立自定義的.msg檔](Message)
+* [Message](Message)
+* [Python](Python)
 
 # 工作區
 創建一個ROS工作區
@@ -23,12 +24,12 @@ catkin_make
 ```
 建立 Package
 ```sh
-catkin_create_pkg <package_name> [depend1] [depend2] [depend3]
+catkin_create_pkg <package_name> [depend1] [depend2] [depend3] ...
 catkin_create_pkg beginner_tutorials std_msgs rospy roscpp
 ```
 後台啟動
 ```sh
-roscore&
+roscore &
 ```
 刪除roscore進程
 ```sh
@@ -39,8 +40,17 @@ killall -9 rosmaster
 ```sh
 SHELL
 ```
-# 常見問題
 
+# 常見問題
+## 如何在ROS中使用Python3
+```sh
+pip install catkin-tools rospkg
+```
+Python 開頭加上：
+```python
+#!/usr/bin/env python3
+```
+參考連結：https://www.cnblogs.com/h46incon/p/6207145.html
 ## "roscore" command not found
 
     sudo apt install ros-melodic-desktop
