@@ -1,7 +1,11 @@
 # 目錄
+* [根目錄](https://github.com/kkldream/ROS-Note/)
+    * [Message](Message)
+    * [Python](Python)
 * [工作區](#工作區)
-* [Message](Message)
-* [Python](Python)
+* [其他](#其他)
+    * [如何在ROS中使用Python3](#如何在ROS中使用Python3)
+* [常見問題](#常見問題)
 
 # 工作區
 創建一個ROS工作區
@@ -41,7 +45,7 @@ killall -9 rosmaster
 SHELL
 ```
 
-# 常見問題
+# 其他
 ## 如何在ROS中使用Python3
 ```sh
 pip install catkin-tools rospkg
@@ -50,6 +54,8 @@ Python 開頭加上：
 ```python
 #!/usr/bin/env python3
 ```
+
+# 常見問題
 參考連結：https://www.cnblogs.com/h46incon/p/6207145.html
 ## "roscore" command not found
 
