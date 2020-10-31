@@ -45,11 +45,30 @@ killall -9 rosmaster
 ```sh
 SHELL
 ```
+## Launch file
+建立：
+```sh
+roscd <package_name>
+mkdir launch
+cd launch
+touch startup.launch
+```
+in `startup.launch`：
+```xml
+<launch>
+    <param name="/print_frq" type="double" value="2.0" />
+    <node name="talker" pkg="beginner_tutorials" type="talker.py" />
+</launch>
+```
+執行：
+```sh
+roslaunch [package] [filename.launch]
+```
 
 # 其他
 ## 如何在ROS中使用Python3
 ```sh
-pip install catkin-tools rospkg
+pip3 install catkin-tools rospkg
 ```
 Python 開頭加上：
 ```python

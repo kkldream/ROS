@@ -25,11 +25,11 @@ sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31
 ```sh
 sudo apt update
 # 桌面完整版（推荐）： : 包含 ROS、rqt、rviz、机器人通用库、2D/3D 模拟器、导航以及 2D/3D 感知包。
-sudo apt install ros-melodic-desktop-full
+sudo apt install ros-melodic-desktop-full -y
 #桌面版： 包含 ROS，rqt，rviz 和机器人通用库
-sudo apt install ros-melodic-desktop
+sudo apt install ros-melodic-desktop -y
 # ROS-基础包： 包含 ROS 包，构建和通信库。没有图形界面工具。
-sudo apt install ros-melodic-ros-base
+sudo apt install ros-melodic-ros-base -y
 # 单独的包： 你也可以安装某个指定的ROS软件包（使用软件包名称替换掉下面的PACKAGE）：
 sudo apt install ros-melodic-PACKAGE
 # 如：
@@ -39,6 +39,7 @@ apt search ros-melodic
 ```
 4. 初始化 rosdep
 ```sh
+sudo apt install python-rosdep -y
 sudo rosdep init
 rosdep update
 ```
@@ -49,7 +50,7 @@ source ~/.bashrc
 ```
 6. 构建工厂依赖
 ```sh
-sudo apt-get install python-rosinstall python-rosinstall-generator python-wstool build-essential
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 ```
 原文連結：http://wiki.ros.org/cn/melodic/Installation/Ubuntu
 
