@@ -1,8 +1,5 @@
 # 目錄
 * [根目錄](https://github.com/kkldream/ROS-Note/)
-    * [安裝](安裝)
-    * [Message](Message)
-    * [Python](Python)
 * [環境安裝筆記](#環境安裝筆記)
     * [Raspberry Pi 4 Ubuntu 18.04 aarch64 (2020/10/31)](#Raspberry-Pi-4-Ubuntu-1804-aarch64-20201031)
     * [Windows 虛擬機 (2020/9/26)](#Windows-虛擬機-2020926)
